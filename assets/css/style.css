@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&display=swap");
 :root{
-    --main-blue: #7f8899;
+    --main-blue: #618ac9;
 }
 *{
     font-family: 'Oswald', sans-serif;
@@ -20,7 +20,7 @@
 }
 /*---------------------------Header Start -------------------------------*/
 header{
-    background-color:rgba(127, 136, 153, 0.85);
+    background-color:rgba(124, 160, 217, 0.85);
     padding: 8px 0;
     width: 100%;
     position: fixed;
@@ -49,6 +49,7 @@ header{
     justify-content: space-between;
     align-items: center;
     gap: 65px;
+    color: var(--main-blue)
 }
 .navLi{
     font-size: 19px;
@@ -66,10 +67,11 @@ header{
     display:flex;
     align-items: center;
     justify-content: center;
+    background-attachment: fixed;
 }
 #mainHeader {
     font-weight: 600;
-    font-size: 100px;
+    font-size: 120px;
     color: #fff;
 }
 .mainText{
@@ -78,17 +80,20 @@ header{
 }
 .mainText .text{
     font-weight: 500;
-    font-size: 50px;
+    font-size: 75px;
     color: #fff;
+}
+.type{
+    color: #97bdf7;
 }
 #mainBtn{
     text-transform: uppercase;
     color: #fff;
-    background-color: rgba(127, 136, 153, 1);
+    background-color: #7ca0d9;
     border: none;
     padding: 13px 50px;
     margin-top: 40px;
-    font-size: 18px;
+    font-size: 22px;
     letter-spacing: 2px;
     font-weight: 500;
     border-radius: 5px;
@@ -98,6 +103,19 @@ header{
 /*---------------------------------Contact Section Start ------------------------------*/
 #kontakt{
     margin-bottom: 200px;
+}
+.contactDisplay{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    margin-top: 100px;
+}
+iframe{
+    width: 800px;
+    height: 460px;
 }
 input:not([type=submit]), textarea {
     width: 100% !important;
@@ -125,6 +143,18 @@ textarea {
     vertical-align: top;
     float: right;
     border: 2px solid var(--main-blue);
+    color: var(--main-blue);
+}
+#ddLista{
+    position: relative;
+    float: left;
+}
+.mainformId{
+    display:flex;
+    justify-content: center;
+}
+#ddLista option{
+    padding: 50px;
 }
 /*---------------------------------Contact Section End ------------------------------*/
 /*---------------------------------Footer Section Start ------------------------------*/
@@ -161,12 +191,17 @@ textarea {
 #footer .box i{
     margin-right: 0.3rem;
 }
-#footer .box a{
-    text-decoration: none;
-    list-style-type: none;
+.dynI{
     margin: 16px 0;
     color: #fff;
     font-size: 18px;
+    margin-right: 0.3rem;
+}
+#footer .box a{
+    margin: 16px 0;
+    color: #fff;
+    font-size: 18px;
+    
 }
 .footer-2{
     border-top: 3px solid #fff;
@@ -198,7 +233,7 @@ color: #fff;
 
 /*---------------------------------Footer Section End ------------------------------*/
 /* ------------------------ Za telefone ------------------------ */
-@media (max-width: 500px) {
+@media (max-width: 426px) {
     /* Navigacioni meni */
     .hamburger{
         display: block;
@@ -213,7 +248,7 @@ color: #fff;
         top: 98px;
         gap: 0;
         flex-direction: column;
-        background-color:rgba(127, 136, 153, 0.85);
+        background-color:rgba(124, 160, 217, 0.85);
         width: 100%;
         text-align: center;
         transition: 0.3s;
@@ -223,6 +258,41 @@ color: #fff;
     }
     .navLi{
         margin: 16px 0;
+    }
+    /* Hero Sekcija */
+    #mainHeader {
+        font-size: 60px;
+    }
+    .mainText .text{
+        font-size: 26px;
+        margin-top: 20px;
+    }
+    #mainBtn{
+        padding: 8px 30px;
+        margin-top: 40px;
+        font-size: 15px;
+    }
+    /* Contact Sekcija */
+    .contactDisplay{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .secondText{
+        font-size: 35px;
+    }
+    .submit {
+        font-size: 15px;
+        position: relative;
+        width: 130px;
+        height: 35px;
+        padding: 0;
+    }
+    iframe{
+        width: 270px;
+        height: 400px;
+    }
+    #kontakt{
+        margin-bottom: 50px;
     }
     /* Footer Sekcija */
     .footerDisplay{
